@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hKM-4K-vM2">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail-->
+        <scene sceneID="Ixw-Bz-ddL">
+            <objects>
+                <viewController id="k9L-WT-Fci" customClass="DetailViewController" customModule="Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fBu-u8-gyc"/>
+                        <viewControllerLayoutGuide type="bottom" id="NNS-1e-hdw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2f9-nr-8NP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Rt-Zd-CCg">
+                                <rect key="frame" x="0.0" y="59" width="600" height="541"/>
+                                <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="NNS-1e-hdw" firstAttribute="top" secondItem="7Rt-Zd-CCg" secondAttribute="bottom" id="2L5-Uv-n2H"/>
+                            <constraint firstItem="7Rt-Zd-CCg" firstAttribute="leading" secondItem="2f9-nr-8NP" secondAttribute="leadingMargin" id="vyi-Eh-WZT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7Rt-Zd-CCg" secondAttribute="trailing" id="xp2-OS-cY7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail" id="u7p-0c-knM"/>
+                    <connections>
+                        <outlet property="webView" destination="7Rt-Zd-CCg" id="mXP-rL-tY4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6h0-mQ-YN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="1004"/>
+        </scene>
+        <!--summary-->
+        <scene sceneID="d85-4j-Gyf">
+            <objects>
+                <tableViewController storyboardIdentifier="summary" title="summary" id="mzJ-Sj-gNc" customClass="Test1TableViewController" customModule="Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="48" sectionHeaderHeight="28" sectionFooterHeight="28" id="IeV-Sw-3uk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="100" id="tY2-9K-zoZ" customClass="Table1ViewCell" customModule="Practice" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tY2-9K-zoZ" id="FeD-oB-lCK">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aGh-mu-wtB">
+                                            <rect key="frame" x="0.0" y="8" width="79" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lbT-IN-sqj">
+                                            <rect key="frame" x="87" y="8" width="38.5" height="32.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y4q-UJ-8KB">
+                                                    <rect key="frame" x="0.0" y="0.0" width="38.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFP-1V-XSZ">
+                                                    <rect key="frame" x="0.0" y="20.5" width="38.5" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellContent" destination="EFP-1V-XSZ" id="0wh-RU-LMF"/>
+                                    <outlet property="cellImage" destination="aGh-mu-wtB" id="hF1-z1-kw1"/>
+                                    <outlet property="cellTitle" destination="y4q-UJ-8KB" id="e7p-ZH-6Xd"/>
+                                    <segue destination="k9L-WT-Fci" kind="presentation" id="Ysx-uu-gpW"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="mzJ-Sj-gNc" id="FJl-bI-ypK"/>
+                            <outlet property="delegate" destination="mzJ-Sj-gNc" id="wjY-hZ-MEZ"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Marines" id="4hC-PJ-pVp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ICp-qL-bgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-526" y="290"/>
+        </scene>
+        <!--weather-->
+        <scene sceneID="6ct-sG-ibe">
+            <objects>
+                <viewController title="weather" id="rkW-oZ-6xs" customClass="WeatherViewController" customModule="Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iri-A0-bae"/>
+                        <viewControllerLayoutGuide type="bottom" id="d7R-gd-CRr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qYU-xO-fGF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="QVC" translatesAutoresizingMaskIntoConstraints="NO" id="ear-Gm-9O3">
+                                <rect key="frame" x="0.0" y="55" width="375" height="563"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9du-CI-opK">
+                                <rect key="frame" x="263" y="153" width="92" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="天気" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1l-NA-E0m">
+                                <rect key="frame" x="51" y="187" width="34" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="QVC Marines Field" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R1H-4K-uu9">
+                                <rect key="frame" x="64" y="86" width="246" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="温度" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="of8-sv-t8H">
+                                <rect key="frame" x="136" y="187" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QLs-sT-eTe">
+                                <rect key="frame" x="0.0" y="11" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title=" 球場天気" id="mjF-xo-VSk"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="2" title="球場天気" image="weather" id="6Er-J1-CD3"/>
+                    <connections>
+                        <outlet property="temp" destination="of8-sv-t8H" id="CiJ-Xg-fGX"/>
+                        <outlet property="weatherIcon" destination="9du-CI-opK" id="O72-pa-7Zi"/>
+                        <outlet property="weatherTitle" destination="H1l-NA-E0m" id="U58-dO-fGP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="El4-E6-4SU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1689.5" y="-384.5"/>
+        </scene>
+        <!--calendar-->
+        <scene sceneID="vxF-v4-CUY">
+            <objects>
+                <viewController title="calendar" id="Du6-xi-qp7" customClass="CalendarViewController" customModule="Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xAV-O0-M2K"/>
+                        <viewControllerLayoutGuide type="bottom" id="Qof-tL-U3g"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wMx-54-xpx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPM-dK-26b">
+                                <rect key="frame" x="20" y="478" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="前月">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getPrevMonthData:" destination="Du6-xi-qp7" eventType="touchUpInside" id="Que-Gh-eGj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="試合日程" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZq-Eg-qbN">
+                                <rect key="frame" x="0.0" y="48" width="375" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KN3-VN-dp8">
+                                <rect key="frame" x="0.0" y="4" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="試合日程" id="8Kr-BN-wy7"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRg-Ax-zDZ">
+                                <rect key="frame" x="305" y="478" width="50" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="次月">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="getNextMonthData:" destination="Du6-xi-qp7" eventType="touchUpInside" id="TZM-GZ-Nqu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="1" title="試合日程" image="calendar" id="5Ar-7D-tOA"/>
+                    <connections>
+                        <outlet property="calendarBar" destination="GZq-Eg-qbN" id="XOf-Pl-uws"/>
+                        <outlet property="nextMonthButton" destination="aRg-Ax-zDZ" id="ROU-wG-i1m"/>
+                        <outlet property="prevMonthButton" destination="iPM-dK-26b" id="nH7-Ye-bV5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mYF-iz-ahg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="u2U-8k-Z7u">
+                    <connections>
+                        <action selector="swipePrevCalendar:" destination="Du6-xi-qp7" id="evB-J1-qpL"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="QUZ-YZ-bXD">
+                    <connections>
+                        <action selector="swipeNextCalendar:" destination="Du6-xi-qp7" id="XkL-ET-OCT"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1648.5" y="-1061.5"/>
+        </scene>
+        <!--MainUI Tab Bar Controller-->
+        <scene sceneID="Lbb-cw-XZ9">
+            <objects>
+                <tabBarController id="hKM-4K-vM2" customClass="MainUITabBarController" customModule="Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="d6K-0H-HOZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Du6-xi-qp7" kind="relationship" relationship="viewControllers" id="S5j-Ih-mA4"/>
+                        <segue destination="rkW-oZ-6xs" kind="relationship" relationship="viewControllers" id="JE4-u0-UFH"/>
+                        <segue destination="NLs-XE-lbO" kind="relationship" relationship="viewControllers" id="Tac-Te-2Lc"/>
+                        <segue destination="NCr-UC-GDL" kind="relationship" relationship="viewControllers" id="Ufi-bi-8Yo"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reh-yt-0cX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2468" y="-731"/>
+        </scene>
+        <!--Songs Detail View Controller-->
+        <scene sceneID="QFF-Uv-IDf">
+            <objects>
+                <viewController id="FLR-k9-6K5" customClass="SongsDetailViewController" customModule="Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rel-ij-g4k"/>
+                        <viewControllerLayoutGuide type="bottom" id="pZ3-0s-erL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yhE-L6-ftt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vTc-YX-NWx">
+                                <rect key="frame" x="106" y="275" width="351" height="258"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="選手名前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sg-c8-A6h">
+                                <rect key="frame" x="247" y="93" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YuL-Wf-oZf">
+                                <rect key="frame" x="154" y="181" width="293" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="playerLyrics" destination="YuL-Wf-oZf" id="Rz0-gf-2Dh"/>
+                        <outlet property="playerName" destination="9sg-c8-A6h" id="TFQ-BZ-Jam"/>
+                        <outlet property="songsVedio" destination="vTc-YX-NWx" id="ZDz-NM-cLU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="93S-iD-vTF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2700" y="1009"/>
+        </scene>
+        <!--選手応援歌-->
+        <scene sceneID="fwa-K9-JmY">
+            <objects>
+                <tableViewController id="kYy-Du-LgK" customClass="SongsTableViewController" customModule="Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="3Et-Io-AYG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" id="wHW-jr-zA4" customClass="SongsTableViewCell" customModule="Practice" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wHW-jr-zA4" id="zbl-JK-FG8">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78r-Ze-K7j">
+                                            <rect key="frame" x="17" y="14" width="227" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="playerName" destination="78r-Ze-K7j" id="AwD-1e-S2t"/>
+                                    <segue destination="FLR-k9-6K5" kind="presentation" id="tO2-lJ-bcQ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kYy-Du-LgK" id="tyk-zf-Wvk"/>
+                            <outlet property="delegate" destination="kYy-Du-LgK" id="ihA-66-hwd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="選手応援歌" id="KSG-GK-8dK"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oiv-V5-mpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1888" y="285"/>
+        </scene>
+        <!--Hello-->
+        <scene sceneID="r0T-9B-8ha">
+            <objects>
+                <viewController id="NCr-UC-GDL" customClass="ViewController" customModule="Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6bW-Gc-7jx"/>
+                        <viewControllerLayoutGuide type="bottom" id="hOC-Ea-Ysy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="D4g-n5-5jC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" tag="5" title="ニュース" image="news" id="3hO-Jh-tCB"/>
+                    <navigationItem key="navigationItem" title="Hello" id="pQw-TV-OON"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2cz-gY-IiO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1210" y="301"/>
+        </scene>
+        <!--news-->
+        <scene sceneID="5rR-lu-lAn">
+            <objects>
+                <tableViewController storyboardIdentifier="news" title="news" id="OXY-ZI-ndG" customClass="NewsTableViewController" customModule="Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" sectionHeaderHeight="28" sectionFooterHeight="28" id="2ti-gD-6s3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="100" id="TJF-nq-cId" customClass="Table1ViewCell" customModule="Practice" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TJF-nq-cId" id="2fk-Pb-kLn">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xvm-EF-Ac2">
+                                            <rect key="frame" x="17" y="7" width="76" height="77"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8t-f8-YmZ">
+                                            <rect key="frame" x="110" y="7" width="219" height="77"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellImage" destination="Xvm-EF-Ac2" id="9Ws-5k-p28"/>
+                                    <outlet property="cellTitle" destination="q8t-f8-YmZ" id="BhW-Dp-YNE"/>
+                                    <segue destination="k9L-WT-Fci" kind="presentation" id="Htg-RZ-TWh"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OXY-ZI-ndG" id="Snr-n0-cHT"/>
+                            <outlet property="delegate" destination="OXY-ZI-ndG" id="we2-Dz-oHq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Marines" id="JR8-hk-Ka0"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pTy-TY-UXj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-985" y="1016"/>
+        </scene>
+        <!--summary-->
+        <scene sceneID="H2a-Fb-iiw">
+            <objects>
+                <tableViewController storyboardIdentifier="blog" title="summary" id="Eh4-UA-S5v" customClass="BlogTableViewController" customModule="Practice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="105" sectionHeaderHeight="28" sectionFooterHeight="28" id="VC5-Y9-VNG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="100" id="WuT-dg-zS9" customClass="Table1ViewCell" customModule="Practice" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WuT-dg-zS9" id="4I5-2J-XFb">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emailshare.png" translatesAutoresizingMaskIntoConstraints="NO" id="eQC-Hx-XzO">
+                                            <rect key="frame" x="5" y="2" width="87" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYq-dr-cpd">
+                                            <rect key="frame" x="98" y="8" width="272" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8E-vI-VHB">
+                                            <rect key="frame" x="103" y="35" width="263" height="46"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="cellContent" destination="C8E-vI-VHB" id="jjz-sq-XdN"/>
+                                    <outlet property="cellImage" destination="eQC-Hx-XzO" id="3Lr-CQ-1E3"/>
+                                    <outlet property="cellTitle" destination="MYq-dr-cpd" id="fzY-gw-NJL"/>
+                                    <segue destination="k9L-WT-Fci" kind="presentation" id="kHg-xt-qA1"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Eh4-UA-S5v" id="JLn-rx-yd3"/>
+                            <outlet property="delegate" destination="Eh4-UA-S5v" id="gcV-ZA-oXa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Marines" id="e9C-rf-8Fa"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="usW-43-zMn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-603.5" y="1709.5"/>
+        </scene>
+        <!--応援歌-->
+        <scene sceneID="m1P-hA-yHo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NLs-XE-lbO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="3" title="応援歌" image="songs" id="shy-H1-arn"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l7X-uv-67q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kYy-Du-LgK" kind="relationship" relationship="rootViewController" id="sY2-fz-Om4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xkb-XF-BIU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2700" y="285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="QVC" width="800" height="530"/>
+        <image name="calendar" width="30" height="30"/>
+        <image name="emailshare.png" width="240" height="197"/>
+        <image name="news" width="30" height="30"/>
+        <image name="songs" width="30" height="30"/>
+        <image name="weather" width="29" height="30"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Htg-RZ-TWh"/>
+    </inferredMetricsTieBreakers>
+</document>
